@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
 	public float jump = 20f;
 	//public float Gravite = 0;
 	private Vector2 DirectionDeplacement = Vector2.zero;
-	//private Vector3 DirectionDeplacement1 = Vector3.zero;
+	//private Vector3 DirectionDeplacement = Vector3.zero;
 	//private CharacterController Player;
 
 	public float horizontalSpeed = 2.0F;
@@ -21,11 +21,13 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		DirectionDeplacement = Vector2.zero;
 		DirectionDeplacement.x = Input.GetAxisRaw ("Horizontal j" + id);
 		DirectionDeplacement.y = Input.GetAxisRaw ("Vertical j" + id);
 
 		//DirectionDeplacement = transform.TransformDirection(DirectionDeplacement);
-		transform.Translate (new Vector3(DirectionDeplacement.x  * Time.deltaTime * Speed, DirectionDeplacement.y * Time.deltaTime * Speed, 0));
+		//transform.Translate (new Vector3(DirectionDeplacement.x  * Time.deltaTime * Speed, DirectionDeplacement.y * Time.deltaTime * Speed, 0.0f));
+
 		//Player.Move (DirectionDeplacement * Speed * Time.deltaTime);
 
 
@@ -48,5 +50,10 @@ public class PlayerController : MonoBehaviour {
 			DirectionDeplacement.y -= jump * Speed * Gravite;
 		}
 		*/
+	}
+
+	void FixedUpdate()
+	{
+		GetComponent<Rigidbody2D>().MovePosition(GetComponent<Rigidbody2D>().position + DirectionDeplacement * Speed * Time.fixedDeltaTime);
 	}
 }
