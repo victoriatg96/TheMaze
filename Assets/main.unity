@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -117,9 +117,9 @@ GameObject:
   m_Component:
   - component: {fileID: 347658573}
   - component: {fileID: 347658572}
-  - component: {fileID: 347658571}
   - component: {fileID: 347658570}
   - component: {fileID: 347658569}
+  - component: {fileID: 347658574}
   m_Layer: 0
   m_Name: Player J2
   m_TagString: Untagged
@@ -162,22 +162,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &347658571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 347658568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd9f8dde7a1d48c4a9d84d4797355edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 2
-  Speed: 7.63
-  jump: 1
-  horizontalSpeed: 12.01
-  verticalSpeed: 0
 --- !u!212 &347658572
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -218,6 +202,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!4 &347658573
 Transform:
   m_ObjectHideFlags: 0
@@ -231,6 +217,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &347658574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347658568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd7d8f24a46cf14298b9890e837eef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  Speed: 10
+  jump: 20
+  horizontalSpeed: 2
+  verticalSpeed: 2
 --- !u!1 &428090094
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +404,8 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!4 &751450628
 Transform:
   m_ObjectHideFlags: 0
@@ -497,6 +501,8 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!4 &1057595603
 Transform:
   m_ObjectHideFlags: 0
@@ -519,9 +525,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1326263257}
   - component: {fileID: 1326263256}
-  - component: {fileID: 1326263255}
   - component: {fileID: 1326263258}
   - component: {fileID: 1326263254}
+  - component: {fileID: 1326263259}
   m_Layer: 0
   m_Name: Player J1
   m_TagString: Untagged
@@ -549,22 +555,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1326263255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1326263253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd9f8dde7a1d48c4a9d84d4797355edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 1
-  Speed: 20
-  jump: 1
-  horizontalSpeed: 12.01
-  verticalSpeed: 0
 --- !u!212 &1326263256
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -605,6 +595,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!4 &1326263257
 Transform:
   m_ObjectHideFlags: 0
@@ -633,6 +625,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1326263259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326263253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd7d8f24a46cf14298b9890e837eef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  Speed: 10
+  jump: 20
+  horizontalSpeed: 2
+  verticalSpeed: 2
 --- !u!1 &1553754279
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +734,8 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!4 &1553754283
 Transform:
   m_ObjectHideFlags: 0
@@ -821,6 +831,8 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!4 &1779978550
 Transform:
   m_ObjectHideFlags: 0
